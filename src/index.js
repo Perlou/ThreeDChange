@@ -6,14 +6,13 @@
 'use strict';
 
 // css
-require('./styles/App.css')
-
+require('./styles/App.css');
 // js
 require('core-js/fn/object/assign');
 var mTween = require('./plugins/startMove.js');
 var nTouch = require('./plugins/touch.js').nTouch;
 
-var imgUrls=['images/img1.jpeg','images/img2.jpeg','images/img3.jpeg','images/img4.jpeg'];
+var imgUrls=['./images/img1.jpg','./images/img2.jpg','./images/img3.jpg','./images/img4.jpg'];
 
 setSize();
 window.addEventListener('resize',setSize,false);
@@ -133,7 +132,8 @@ function setLayout(){
 	for(var i=0; i<li.length; i++){
 		var span=li[i].getElementsByTagName('span');
 		for(var j=0; j<span.length; j++){
-			span[j].style.backgroundImage='url('+imgUrls[j]+')';
+			// span[j].style.backgroundImage='url('+imgUrls[j]+')';
+			span[j].style.backgroundImage = 'url('+require(imgUrls[j])+')';
 			span[j].style.backgroundPosition=-(i%4)*4+'rem -'+parseInt(i/4)*liH+'px';
 		}
 	}
