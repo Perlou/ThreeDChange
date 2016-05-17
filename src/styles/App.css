@@ -35,10 +35,13 @@ footer {
   left: 0;
   top: 40px;
   bottom: 40px;
-  -webkit-perspective: 1200px;
   perspective: 1200px;
+  -webkit-perspective: 1200px;
+  -moz-perspective: 1200px;
+  -ms-perspective: 1200px;
   z-index: 1;
 }
+
 @keyframes move{
   0% {
     transform:rotateY(0deg) rotateX(0deg);
@@ -50,6 +53,7 @@ footer {
     transform:rotateY(180deg) rotateX(-180deg);
   }
 }
+
 @-webkit-keyframes move{
   0% {
     -webkit-transform:rotateY(0deg) rotateX(0deg);
@@ -61,9 +65,36 @@ footer {
     -webkit-transform:rotateY(180deg) rotateX(-180deg);
   }
 }
+
+@-moz-keyframes move{
+  0% {
+    -moz-transform:rotateY(0deg) rotateX(0deg);
+  }
+  50% {
+    -moz-transform:rotateY(0deg) rotateX(-180deg);
+  }
+  100% {
+    -moz-transform:rotateY(180deg) rotateX(-180deg);
+  }
+}
+
+@-ms-keyframes move{
+  0% {
+    -ms-transform:rotateY(0deg) rotateX(0deg);
+  }
+  50% {
+    -ms-transform:rotateY(0deg) rotateX(-180deg);
+  }
+  100% {
+    -ms-transform:rotateY(180deg) rotateX(-180deg);
+  }
+}
+
 #loading {
-  -webkit-perspective: 180px;
   perspective: 180px;
+  -webkit-perspective: 180px;
+  -moz-perspective: 180px;
+  -ms-perspective: 180px;
   z-index:2;
   background:#000;  
 }
@@ -75,8 +106,10 @@ footer {
   left: 50%;
   top: 50%;
   margin: -50px 0 0 -50px;
-  -webkit-animation: move 1s infinite ease-in-out;
   animation: move 1s infinite ease-in-out;
+  -webkit-animation: move 1s infinite ease-in-out;
+  -moz-animation: move 1s infinite ease-in-out;
+  -ms-animation: move 1s infinite ease-in-out;
 }
 #imgList {
   width: 16rem;
@@ -87,8 +120,10 @@ footer {
 #imgList li {
   width: 4rem;
   float: left;
-  -webkit-perspective: 300px;
   perspective: 300px;
+  -webkit-perspective: 300px;
+  -moz-perspective: 300px;
+  -ms-perspective: 300px;
 }
 #navs {
   width: 100%;
@@ -116,9 +151,15 @@ footer {
 .div {
   width: 100%;
   height: 100%;
-  transform-style: preserve-3d;
   position: relative;
+  transform-style: preserve-3d;
+  -webkit-transform-style: preserve-3d;
+  -moz-transform-style: preserve-3d;
+  -ms-transform-style: preserve-3d;
   transform-origin: center center -2rem;
+  -webkit-transform-origin: center center -2rem;
+  -moz-transform-origin: center center -2rem;
+  -ms-transform-origin: center center -2rem;
 }
 .div div {
   width: 4rem;
@@ -127,12 +168,24 @@ footer {
   left: 4rem;
   top: 0;
   transform-origin: left;
+  -webkit-transform-origin: left;
+  -moz-transform-origin: left;
+  -ms-transform-origin: left;
   transform-style: preserve-3d;
+  -webkit-transform-style: preserve-3d;
+  -moz-transform-style: preserve-3d;
+  -ms-transform-style: preserve-3d;
   transform: rotateY(90deg);
+  -webkit-transform: rotateY(90deg);
+  -moz-transform: rotateY(90deg);
+  -ms-transform: rotateY(90deg);
 }
 .div>div {
   left: 0;
   transform: rotateY(0deg);
+  -webkit-transform: rotateY(0deg);
+  -moz-transform: rotateY(0deg);
+  -ms-transform: rotateY(0deg);
 }
 .div span {
   width: 100%;
